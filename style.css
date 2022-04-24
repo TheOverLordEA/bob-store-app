@@ -2,13 +2,21 @@
   --default-font-color: rgb(18, 18, 18);
 }
 
+@font-face {
+  font-family: "cinzelregular";
+  src: url("../customfont/cinzel-variablefont_wght-webfont.woff"),
+    url("cinzel-variablefont_wght-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: Avenir Next, SegoeUI, arial, sans-serif;
+  font-family: "cinzelregular", Avenir Next, SegoeUI, arial, sans-serif;
   font-size: 1.314em;
   margin-top: 24px; /* non-scalable fallback for old browsers */
   margin-top: 1.5rem; /* 24px, will be ignored by old browsers */
