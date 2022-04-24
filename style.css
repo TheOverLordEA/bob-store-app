@@ -1,11 +1,16 @@
 :root {
   --default-font-color: rgb(18, 18, 18);
+  --default-bg-color: #f5f5f5;
+  --wrap-min-width: 100%;
+  --wrap-min-height: 100%;
 }
 
+/* ----------- Custom Font ----------- */
 @font-face {
   font-family: "cinzelregular";
-  src: url("../customfont/cinzel-variablefont_wght-webfont.woff"),
-    url("cinzel-variablefont_wght-webfont.woff") format("woff");
+  src: url("/customfont-main/cinzel-variablefont_wght-webfont.woff"),
+    url("/customfont-main/cinzel-variablefont_wght-webfont.woff2")
+      format("woff");
   font-weight: 500;
   font-style: normal;
 }
@@ -20,4 +25,170 @@ h6 {
   font-size: 1.314em;
   margin-top: 24px; /* non-scalable fallback for old browsers */
   margin-top: 1.5rem; /* 24px, will be ignored by old browsers */
+}
+
+/* ----------- Style for Header ----------- */
+.site-header {
+  display: flex;
+  align-content: flex-start;
+  padding: 1rem;
+  min-height: var(--wrap-min-height);
+  min-width: var(--wrap-min-width);
+  border: 1px solid rgb(24, 21, 21);
+}
+
+.nav-el {
+  margin-left: 3rem;
+  padding: 0.5rem;
+  border: 1px solid rgb(132, 160, 184);
+  /* border: none; */
+  font-family: "cinzelregular", Avenir Next, SegoeUI, arial, sans-serif;
+  background-color: var(--default-bg-color);
+}
+
+.nav-el > .logo-link {
+  color: var(--default-font-color);
+  text-decoration: none;
+}
+
+.logo {
+  position: relative;
+  /* border: none; */
+  background-color: var(--default-bg-color);
+  cursor: pointer;
+}
+
+.logo::after,
+.logo::before {
+  content: " ";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border: 0px solid #fff;
+  transition: all 1s;
+}
+
+.logo::after {
+  top: -5px;
+  left: -1px;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+}
+
+.logo::before {
+  bottom: -11px;
+  right: -1px;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.logo > .logo--el {
+  padding: 1rem;
+}
+
+/* ----------- Nav Logo Animation ----------- */
+
+.logo:hover {
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.logo:hover::after,
+.logo:hover::before {
+  bottom: -5px;
+  right: -1px;
+  width: var(--wrap-min-width);
+  height: var(--wrap-min-height);
+}
+
+/* ----------- Dropdown Menu ----------- */
+
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+  min-width: 150px;
+  min-height: 100px;
+  line-height: 1.3;
+  z-index: 1;
+  background-color: var(--default-bg-color);
+  /* transition: all 5s; */
+  margin-left: 1rem;
+  border: 1px solid tan;
+  line-height: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-el:hover > .nav-dropdown-menu {
+  margin-top: 0.5rem;
+  background-color: var(--default-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-dropdown-menu > .dropdown-menu--el {
+  color: var(--default-font-color);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ----------- Style For Main- ---------- */
+
+.page-wrap {
+  display: flex;
+  justify-content: center;
+  min-width: var(--wrap-min-width);
+  min-height: var(--wrap-min-height);
+}
+#maincontent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* ----------- Laptops Non-retina Display ----------- */
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+/* ----------- Laptops Retina Display ----------- */
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+}
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
 }
