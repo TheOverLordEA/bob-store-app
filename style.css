@@ -149,6 +149,19 @@ h6 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  line-height: 3.8rem;
+}
+
+#maincontent > a {
+  font-family: "cinzelregular", Avenir Next, SegoeUI, arial, sans-serif;
+  text-decoration: none;
+  color: var(--default-font-color);
+}
+
+.main--el {
+  font-size: calc(8.5 * 1rem);
+  font-weight: 400;
+  color: var(--default-font-color);
 }
 
 /* ----------- Laptops Non-retina Display ----------- */
@@ -171,6 +184,39 @@ h6 {
 
 /* Portrait and Landscape */
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .site-header {
+    overflow: hidden;
+    padding: 1rem 0rem;
+    font-size: smaller;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .nav-el {
+    margin-left: 0rem;
+
+    padding: 0.5rem 0rem;
+  }
+
+  .logo:hover {
+    display: none;
+  }
+
+  .nav-el:hover {
+    display: none;
+  }
+
+  .logo::after,
+  .logo::before {
+    border: none;
+  }
+
+  #maincontent {
+    line-height: 1rem;
+  }
+  .main--el {
+    font-size: calc((6.5 - 1) * 1.2vh + 1rem);
+  }
 }
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
@@ -191,4 +237,7 @@ h6 {
 
 /* Portrait and Landscape */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .main--el {
+    font-size: calc((8.5 - 1) * 1.2vh + 1rem);
+  }
 }
