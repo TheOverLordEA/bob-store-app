@@ -142,6 +142,7 @@ h6 {
   display: flex;
   justify-content: center;
   min-width: var(--wrap-min-width);
+  padding-top: 3rem;
   min-height: var(--wrap-min-height);
 }
 #maincontent {
@@ -162,6 +163,60 @@ h6 {
   font-size: calc(8.5 * 1rem);
   font-weight: 400;
   color: var(--default-font-color);
+}
+
+/* ----------- Work CSS Style ----------- */
+.content-page-wrap {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  min-width: 100%;
+  min-height: 100%;
+  color: var(--default-font-color);
+
+  padding-top: 5vw;
+}
+
+.block-content {
+  display: flex;
+  max-width: 50%;
+  line-height: 1.3rem;
+  flex-direction: column;
+  padding-left: 18rem;
+}
+
+.content--description {
+  font-family: "cinzelregular", Avenir Next, SegoeUI, arial, sans-serif;
+  font-weight: 100;
+  font-size: calc(2.5 * 1rem);
+  line-height: 3rem;
+}
+
+.item--description {
+  font-family: "cinzelregular", Avenir Next, SegoeUI, arial, "sans-serif";
+  font-weight: 100;
+  line-height: 1.8rem;
+  padding-bottom: 1rem;
+  color: #151515;
+}
+
+.blog-link > span {
+  color: var(--default-font-color);
+  font-family: "cinzelregular", Avenir Next, SegoeUI, arial, "sans-serif";
+  font-size: large;
+  font-weight: 600;
+}
+
+.gallery-reel-container {
+  display: flex;
+  align-items: center;
+  min-width: 100%;
+  padding-top: 1rem;
+}
+
+.gallery-reel-wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, 1fr);
 }
 
 /* ----------- Laptops Non-retina Display ----------- */
