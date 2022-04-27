@@ -219,6 +219,25 @@ h6 {
   grid-template-rows: repeat(1, 1fr);
 }
 
+/* ----------- About CSS Style ----------- */
+.main-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.main-content > .main-content--item {
+  font-family: "cinzelregular", Avenir Next, SegoeUI, arial, "sans-serif";
+  max-width: 68%;
+  line-height: 1.8;
+  font-size: calc(1 * 1rem);
+  font-weight: 100;
+  padding: 10rem 1rem 1rem 5rem;
+}
+
+.img-item {
+  width: 100px;
+}
+
 /* ----------- Laptops Non-retina Display ----------- */
 
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
