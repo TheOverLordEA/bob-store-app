@@ -157,6 +157,7 @@ h6 {
   font-family: "cinzelregular", Avenir Next, SegoeUI, arial, sans-serif;
   text-decoration: none;
   color: var(--default-font-color);
+  letter-spacing: -1rem;
 }
 
 .main--el {
@@ -237,6 +238,125 @@ h6 {
 .img-item {
   width: 100px;
 }
+/* ----------- JOURNAL CSS Style  ----------- */
+.layout-wrap {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+.main-content-wrap {
+  min-height: 100vh;
+  min-width: 600px;
+  padding-top: 3rem;
+}
+
+.main-content-wrap > .main-content--item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 3rem 1rem 1rem 5rem;
+  position: sticky;
+  top: 0;
+  max-width: 85%;
+}
+
+.main-content--item > .item--description {
+  font-weight: 500;
+  font-family: "cinzelregular", Avenir Next, SegoeUI, arial, "sans-serif";
+  font-size: calc((2.2 - 1) * 1.2vw + 1rem);
+}
+
+.main-content--item > p {
+  font-family: "cinzelregular", Avenir Next, SegoeUI, arial, "sans-serif";
+  line-height: 1.8rem;
+}
+
+.item-wrap {
+  /* display: grid;
+  grid-gap: 1rem;
+  /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+  width: 100%;
+  overflow: auto;
+  height: 150rem;
+}
+
+.item-wrap > .grid-layout {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: minmax(100px, 500px);
+  min-height: 100%;
+  grid-gap: 1rem;
+  padding: 1rem;
+  padding-top: 2rem;
+}
+
+.grid-layout > .item-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-height: 500px;
+  min-width: 300px;
+  /* border: 1px solid; */
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.grid-layout > .item-card > .image-contain {
+  display: contents;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.grid-layout > .item-card > .image-contain > img {
+  object-fit: contain;
+  width: 100%;
+  overflow: hidden;
+}
+
+.grid-layout > .item-card > .content-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.grid-layout > .item-card > .content-description > h1 {
+  font-family: "cinzelregular", Avenir Next, SegoeUI, arial, "sans-serif";
+  font-weight: 500;
+  font-size: calc(1.1 * 1rem);
+}
+
+.grid-layout > .item-card > .content-description > p {
+  margin: 0;
+  padding-bottom: 1rem;
+  font-family: "cinzelregular", Avenir Next, SegoeUI, arial, "sans-serif";
+  font-size: 14px;
+}
+
+.grid-layout > .item-card > .content-description > .btn-text > button {
+  font-family: arial;
+  color: rgb(255, 255, 255);
+  background-color: #151515;
+  padding: 1rem;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+}
+
+.grid-layout > .item-card > .content-description > .btn-text > button:hover {
+  opacity: 0.8;
+}
+
+/* ----------- Large Laptops ----------- */
+@media screen and (min-width: 992px) {
+  .item-wrap {
+    padding-right: 5rem;
+    width: 100%;
+  }
+}
 
 /* ----------- Laptops Non-retina Display ----------- */
 
@@ -287,6 +407,7 @@ h6 {
 
   #maincontent {
     line-height: 1rem;
+    letter-spacing: 1rem;
   }
   .main--el {
     font-size: calc((6.5 - 1) * 1.2vh + 1rem);
